@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<style>
+			
+ #stage {
+  	position: relative;
+   /* -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;*/
+    perspective: 1200px;
+    padding-left: 180px; height: 160px;
+  }
+
+		  #spinner {
+		  	transform-origin: 180px 0 0;
+		  	animation: spinner 6s infinite linear;
+
+		    /*-webkit-animation-name: spinner;
+		    -webkit-animation-timing-function: linear;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-duration: 6s;
+
+		    animation-name: spinner;
+		    animation-timing-function: linear;
+		    animation-iteration-count: infinite;
+		    animation-duration: 6s;
+
+		    -webkit-transform-style: preserve-3d;
+		    -moz-transform-style: preserve-3d;
+		    -ms-transform-style: preserve-3d;
+		    -o-transform-style: preserve-3d;*/
+		    transform-style: preserve-3d;
+		  }
+
+			/* WebKit and Opera browsers 
+  @-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }*/
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      /*-moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);*/
+      transform: rotateY(0deg);
+    }
+    to {
+      /*-moz-transform: rotateY(360deg);
+      -ms-transform: rotateY(360deg);*/
+      transform: rotateY(360deg);
+    }
+  }
+
+
+ 
+
+		  #spinner:hover {
+		    -webkit-animation-play-state: paused;
+		    animation-play-state: paused;
+		  }
+		  #spinner img {
+    position: absolute;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+  }
+
+.hover-img {
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	bottom: 80px;
+	transition: all .5s ease-out 0s;
+	visibility: hidden;
+}
+.tran{
+	position: relative;
+}
+.aaa{
+	max-height: 100%;
+}
+.tran:hover .hover-img {
+	bottom: 0;
+	opacity: 1;
+	visibility: visible;
+
+}
+#spinner .img1{
+	transform: rotateY(0deg) translateX(180px);padding: 0 0 0 100px;
+	width: 260px;
+	height: 160px;
+}
+</style>
+	</head>
+	<body>
+		<div id="stage" style="">
+  <div id="spinner" ><!--tam xoay cách truc x 180 bằng padding left stage(edit sau)-->
+    <img class="img1" src="img01.jpg"  alt="">
+    <img class="img2" style="-webkit-transform: rotateY(-72deg) translateX(180px);padding: 0 0 0 100px;" src="menu-img1.jpg" width="260" height="160" alt="">
+    <img class="img3" style="-webkit-transform: rotateY(-144deg) translateX(180px);padding: 0 0 0 100px;" src="menu-img2.jpg" width="260" height="160" alt="">
+    <img class="img4" style="-webkit-transform: rotateY(-216deg) translateX(180px);padding: 0 0 0 100px;" src="img/px-back-view-boats-couple-2612852-1600.jpg" width="260" height="160" alt="">
+    <!--<img class="img5" style="-webkit-transform: rotateY(-288deg) translateX(180px);padding: 0 0 0 100px;" src="menu-img1.jpg" width="260" height="160" alt="">-->
+    <iframe width="260" height="160" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" style="-webkit-transform: rotateY(-288deg) translateX(180px);padding: 0 0 0 100px;">
+</iframe>
+  </div>
+</div>
+
+<div id="stage2" style="background: rgba(0,0,0,0.5);">
+<p id="spinner2" style="background: rgba(0,0,0,0.5); text-align: center; color: #fff;">wellcome to bach khoa</p>
+</div> 
+<div class="tran">
+	<img class="aaa" src="img01.jpg" width="260" height="160"/>
+	<img class="hover-img" src="img01.jpg" width="260" height="160" alt="html template">
+</div>
+
+	</body>
+</html>

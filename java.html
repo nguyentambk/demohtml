@@ -1,0 +1,40 @@
+<script type="text/javascript">
+	var gameContinue = true;
+while(gameContinue) {
+// Anh hùng tấn công!
+var heroHit = Math.random()*100 > dragonAgi;
+if (heroHit) {
+dragonHealth = dragonHealth – strength;
+alert(‘TRẢM LONG! Bạn gây sát thương ‘+strength+’ điểm cho Rồng!’);
+var heroCritical = Math.random()*100 < intel;
+if (heroCritical) {
+dragonHealth = dragonHealth – strength*2; // Double damage
+alert(‘CHÍ MẠNG! Bạn gây sát thương chí mạng thêm ‘+strength*2+’ điểm cho Rồng!’);
+}
+} else alert(‘XÍ HỤT! Rồng đã lượn tránh được đòn tấn công của Bạn!’);
+// Rồng tấn công!
+var dragonHit = Math.random()*100 > agility;
+if (dragonHealth <= 0) {
+// Rồng lên bàn thờ
+gameContinue = false;
+alert(‘CHIẾN THẮNG!!! Chúc mừng bạn đã chiến thắng!!!’);
+} else {
+if (dragonHit) {
+health = health – dragonStr;
+alert(‘HỎA CẦU! Rồng gây sát thương ‘+dragonStr+’ điểm cho Bạn!’);
+var dragonCritical = Math.random()*100 < dragonInt;
+if (dragonCritical) {
+health = health – dragonStr*2; // Double damage
+alert(‘CHÍ MẠNG! Rồng gây sát thương chí mạng thêm ‘+dragonStr*2+’ điểm cho Bạn!’);
+}
+} else alert(‘XÍ HỤT! Bạn đã tránh được đòn tấn công từ Rồng!’);
+}
+
+
+// Kiểm tra xem Anh Hùng có bị nướng?!
+if (health <= 0) {
+gameContinue = false;
+alert(‘THẤT BẠI!!! Chúc mừng bạn đã có tên trên menu món tối của Rồng: Hiệp sĩ nướng lá lốt!’);
+}
+};
+</script>

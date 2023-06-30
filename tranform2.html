@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#codinh{
+			position: relative;
+			perspective: 1000px;
+			padding-left: 180px; height: 160px;
+
+		}
+		#xoay{
+			transform-origin: 180px 0 0;
+			position: absolute;
+			animation: xoaydi 8s infinite linear;
+			transform-style: preserve-3d;
+			}
+
+		@keyframes xoaydi{
+			from{
+				transform: rotateY(0deg);
+			}
+			to{
+				transform: rotateY(360deg);
+			}
+		}
+		#xoay img {
+    position: absolute;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.8);
+    padding: 0 0 0 100px
+    
+  }
+
+		.hinh1{
+			transform: rotateY(0deg) translateX(180px);
+
+		}
+		.hinh2{
+			transform: rotateY(72deg) translateX(180px);
+		}
+		.hinh3{
+			transform: rotateY(144deg) translateX(180px);
+		}
+		.hinh4{
+			transform: rotateY(216deg) translateX(180px);
+		}
+		.hinh5{
+			transform: rotateY(288deg) translateX(180px);
+		}
+	</style>
+</head>
+<body>
+	<div id="codinh" style="">
+	<div id="xoay">
+		<img class="hinh1" src="images/hot-girl_1.jpg" width="260" height="160"/>
+		<img class="hinh2" src="images/hot-girl_2.jpg" width="260" height="160"/>
+		<img class="hinh3" src="images/hot-girl_3.jpg" width="260" height="160"/>
+		<img class="hinh4" src="images/hot-girl_4.jpg" width="260" height="160"/>
+		<img class="hinh5" src="images/hot-girl_5.jpg" width="260" height="160"/>
+	</div>
+</div> 
+</body>
+</html>

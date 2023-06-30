@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  background: #7FFFD4;
+  list-style-type: none;
+  text-align: center;
+}
+li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+a {
+  color: #f1f1f;
+  text-decoration: none;
+  display: block;
+}
+a:hover {
+  background: #F1F1F1;
+  color: #0C0A0A;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+}
+#menu ul li:hover .sub-menu {
+  display: block;
+}
+</style>
+</head>
+<body>
+<div id="menu">
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#">Giới thiệu</a></li>
+    <li><a href="#">Sản phẩm</a>
+    	<ul class="sub-menu">
+	        <li><a href="#">Thiết kế website</a></li>
+	        <li><a href="#">Dịch vụ SEO</a></li>
+	        <li><a href="#">Hosting</a></li>
+      	</ul>
+    </li>
+    <li><a href="#">Hỏi đáp</a></li>
+    <li><a href="#">Liên hệ</a></li>
+  </ul>
+</div>
+</body>
+</html>
