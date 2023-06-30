@@ -37,6 +37,55 @@ a:hover {
 #menu ul li:hover .sub-menu {
   display: block;
 }
+.blog-img a {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+.blog-img > a::after {
+	animation-duration: 0.5s;
+	background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+	content: "";
+	display: block;
+	height: 100%;
+	opacity: 1;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translateX(0%);
+	transition: all 0.5s ease 0s;
+	width: 50%;
+	z-index: 1;
+}
+.blog-img > a::before {
+	animation-duration: 0.5s;
+	background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+	content: "";
+	display: block;
+	height: 100%;
+	left: 0;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	transform: translateX(-0px);
+	transition: all 0.5s ease 0s;
+	width: 50%;
+	z-index: 1;
+}
+.jtv-blog:hover .blog-img > a::before {
+	opacity: 1;
+	transform: translateX(-100%);
+	visibility: visible;
+}
+.jtv-blog:hover .blog-img > a::after {
+	opacity: 1;
+	transform: translateX(100%);
+	visibility: visible;
+}
+.blog-content-jtv a:hover {
+	color: #1fc0a0;
+}
 </style>
 </head>
 <body>
@@ -49,6 +98,7 @@ a:hover {
 	        <li><a href="#">Thiết kế website</a></li>
 	        <li><a href="#">Dịch vụ SEO</a></li>
 	        <li><a href="#">Hosting</a></li>
+	        <li><a href="#">Hosting2</a></li>
       	</ul>
     </li>
     <li><a href="#">Hỏi đáp</a></li>
